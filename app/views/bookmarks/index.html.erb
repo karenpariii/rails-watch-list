@@ -1,0 +1,5 @@
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li><%= link_to bookmark.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
