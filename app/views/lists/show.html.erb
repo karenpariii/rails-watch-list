@@ -1,1 +1,11 @@
 <%= @list.name %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "Add bookmark", class: "btn btn-primary" %>
+<% end %>
+
+
+<% @list.movies.each do |movie| %>
+  <%= movie.title %>
+<% end %>
